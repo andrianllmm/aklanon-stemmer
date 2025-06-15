@@ -25,7 +25,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["twine>=5.1.1"]
+dev = ["pip-tools>=7.4.1", "twine>=5.1.1"]
 test = ["pytest>=8.3.2", "mypy>=1.11.0"]
 
 [project.urls]
