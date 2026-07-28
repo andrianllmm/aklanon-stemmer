@@ -15,7 +15,7 @@ chosen based on how much was changed during the process.
 ## Installation
 
 ```sh
-pip install git+https://github.com/andrianllmm/aklanon-stemmer.git@main
+pip install aklstemmer
 ```
 
 ## Usage
