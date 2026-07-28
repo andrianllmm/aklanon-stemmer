@@ -1,4 +1,4 @@
-from .alphabet import VOWELS, CONSONANTS
+from .alphabet import CONSONANTS, VOWELS
 
 
 def is_valid(token, valid_words=None):
@@ -29,12 +29,14 @@ def is_acceptable(token):
     Returns:
         str/bool: The token if token is acceptable, False otherwise.
     """
-    if is_vowel(token[0]):
-        if len(token) == 2 or (len(token) >= 3 and any(is_consonant(c) for c in token)):
-            return token
-    elif is_consonant(token[0]):
-        if len(token) == 3 or (len(token) >= 4 and any(is_vowel(c) for c in token)):
-            return token
+    if is_vowel(token[0]) and (
+        len(token) == 2 or (len(token) >= 3 and any(is_consonant(c) for c in token))
+    ):
+        return token
+    if is_consonant(token[0]) and (
+        len(token) == 3 or (len(token) >= 4 and any(is_vowel(c) for c in token))
+    ):
+        return token
     return False
 
 

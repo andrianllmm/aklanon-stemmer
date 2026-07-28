@@ -1,7 +1,5 @@
-from aklstemmer.helpers.words import get_words
-
 from aklstemmer import stemmer
-
+from aklstemmer.helpers.words import get_words
 
 valid_words = get_words()
 
@@ -23,8 +21,8 @@ def test_stem_pre():
         "paninigarilyo": "sigarilyo",
         "pananahi": "tahi",
     }
-    for s in stems:
-        assert stems[s] in stemmer.get_stem_candidates(
+    for s, expected in stems.items():
+        assert expected in stemmer.get_stem_candidates(
             s, valid_words + list(stems.values())
         )
 
@@ -37,8 +35,8 @@ def test_stem_inf():
         "chineck": "check",
         "splinit": "split",
     }
-    for s in stems:
-        assert stems[s] in stemmer.get_stem_candidates(
+    for s, expected in stems.items():
+        assert expected in stemmer.get_stem_candidates(
             s, valid_words + list(stems.values())
         )
 
@@ -57,8 +55,8 @@ def test_stem_suf():
         "buksa": "bukas",
         "tamna": "tanom",
     }
-    for s in stems:
-        assert stems[s] in stemmer.get_stem_candidates(
+    for s, expected in stems.items():
+        assert expected in stemmer.get_stem_candidates(
             s, valid_words + list(stems.values())
         )
 
@@ -76,8 +74,8 @@ def test_stem_rep():
         "splsplit": "split",
         "splisplit": "split",
     }
-    for s in stems:
-        assert stems[s] in stemmer.get_stem_candidates(
+    for s, expected in stems.items():
+        assert expected in stemmer.get_stem_candidates(
             s, valid_words + list(stems.values())
         )
 
@@ -94,7 +92,7 @@ def test_stem_dup():
         "ibat-iba": "iba",
         "libut-libo": "libo",
     }
-    for s in stems:
-        assert stems[s] in stemmer.get_stem_candidates(
+    for s, expected in stems.items():
+        assert expected in stemmer.get_stem_candidates(
             s, valid_words + list(stems.values())
         )
