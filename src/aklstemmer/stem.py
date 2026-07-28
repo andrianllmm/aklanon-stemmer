@@ -1,7 +1,4 @@
-"""This module provides a class to store Aklanon stems.
-"""
-
-from typing import Optional
+"""This module provides a class to store Aklanon stems."""
 
 
 class Stem(str):
@@ -26,16 +23,16 @@ class Stem(str):
     def __init__(
         self,
         stem,
-        pre: Optional[str] = None,
-        inf: Optional[str] = None,
-        suf: Optional[str] = None,
-        rep: Optional[str] = None,
-        dup: Optional[str] = None,
-        contraction: Optional[str] = None,
-        phoneme_change: Optional[str] = None,
-        assimilation: Optional[str] = None,
-        vowel_loss: Optional[str] = None,
-        metathesis: Optional[str] = None,
+        pre: str | None = None,
+        inf: str | None = None,
+        suf: str | None = None,
+        rep: str | None = None,
+        dup: str | None = None,
+        contraction: str | None = None,
+        phoneme_change: str | None = None,
+        assimilation: str | None = None,
+        vowel_loss: str | None = None,
+        metathesis: str | None = None,
     ):
         # Initialize additional attributes
         self.pre = pre

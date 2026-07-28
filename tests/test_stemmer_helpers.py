@@ -1,10 +1,7 @@
-from aklstemmer.helpers.words import get_words
-from aklstemmer.helpers.validation import is_valid, is_acceptable
 from aklstemmer.helpers.manipulation import replace_letter, swap_letters
-
-from aklstemmer import stemmer
+from aklstemmer.helpers.validation import is_acceptable, is_valid
+from aklstemmer.helpers.words import get_words
 from aklstemmer.stem import Stem
-
 
 valid_words = get_words()
 

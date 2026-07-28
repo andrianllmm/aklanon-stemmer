@@ -1,11 +1,10 @@
 import csv
 import os
+
 from tabulate import tabulate
 
-from aklstemmer.helpers.words import get_words
-
 from aklstemmer import stemmer
-
+from aklstemmer.helpers.words import get_words
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
