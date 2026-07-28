@@ -69,6 +69,24 @@ print(candidates)
 
 The accuracy hasn't been tested yet.
 
+## Development
+
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management.
+
+Clone the repo and sync dependencies (including dev and test groups):
+
+```sh
+git clone https://github.com/andrianllmm/tagalog-stemmer.git
+cd tagalog-stemmer
+uv sync --all-groups
+```
+
+Run the tests:
+
+```sh
+uv run pytest
+```
+
 ## Contributing
 
 Contributions are welcome! To get started:
